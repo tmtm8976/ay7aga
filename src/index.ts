@@ -2,8 +2,8 @@ import { Elysia } from 'elysia';
 
 const app = new Elysia()
   .get('/', () => Bun.file('./src/views/index.html'))
-  .post('/', ({ body }) => {
-    console.log("posted: ",body);
+  .post('/', (res: Response) => {
+    console.log('posted: ', res.body);
   })
   .listen(3000);
 
