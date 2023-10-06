@@ -8,20 +8,48 @@
     <script src="https://unpkg.com/hyperscript.org@0.9.11"></script>
   </head>
   <body class="bg-[#111111] text-[#EEEEEE] font-sans">
-
     <div class="w-full h-screen flex flex-col justify-center items-center">
       <h1 class="font-bold text-3xl">Welcome</h1>
       <div class="w-42 h-16 flex items-center justify-center gap-5">
         <div>
-          <button class="bg-zinc-600 px-8 py-2 rounded-lg" script="on click remove .hidden from #form">Create Post</button>
+          <button
+            class="bg-zinc-600 px-8 py-2 rounded-lg"
+            script="on click remove .hidden from #form"
+          >
+            Create Post
+          </button>
           <!-- create post form start -->
-          <div id="form" class="hidden absolute top-0 left-0 w-screen h-screen flex items-center justify-center" >
-            <form hx-post="/" class="bg-zinc-600 text-white w-full md:w-1/2 h-full md:h-1/2 rounded-lg p-5 flex justify-between items-start" script="halt the event">
+          <div
+            id="form"
+            class="hidden absolute top-0 left-0 w-screen h-screen flex items-center justify-center"
+          >
+            <form
+              hx-post="/"
+              hx-swap="none"
+              class="bg-zinc-600 text-white w-full md:w-1/2 h-full md:h-1/2 rounded-lg p-5 flex justify-between items-start"
+            >
               <div>
-                <textarea name="post content" placeholder="What's on your mind?" width="100px" height="100px" class="resize-none outline-none text-black"></textarea>
-                <button type="submit" class="bg-zinc-500 shadow-lg px-8 py-2 rounded-lg">submit</button>
+                <textarea
+                  name="post content"
+                  placeholder="What's on your mind?"
+                  width="100px"
+                  height="100px"
+                  class="resize-none outline-none text-black"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="bg-zinc-500 shadow-lg px-8 py-2 rounded-lg"
+                >
+                  submit
+                </button>
               </div>
-              <button class="close text-black font-bold" type="button" script="on click add .hidden to #form">&#x2715;</button>
+              <button
+                class="close text-black font-bold"
+                type="button"
+                script="on click add .hidden to #form"
+              >
+                &#x2715;
+              </button>
             </form>
           </div>
           <!-- create post form end -->
