@@ -21,30 +21,34 @@
           <!-- create post form start -->
           <div
             id="form"
-            class="absolute top-0 left-0 w-screen h-screen flex items-center justify-center"
+            class="hidden absolute top-0 left-0 w-screen h-screen flex items-center justify-center"
           >
             <form
               hx-post="/"
               hx-swap="none"
-              class="bg-zinc-600 text-white w-full sm:w-1/2 h-full sm:h-1/2 sm:rounded-lg p-5 relative pt-11"
+              class="bg-zinc-600 text-white w-full md:w-1/2 h-full md:h-1/2 rounded-lg p-5 flex justify-between items-start"
             >
+              <div>
+                <textarea
+                  name="post"
+                  placeholder="What's on your mind?"
+                  width="100px"
+                  height="100px"
+                  class="resize-none outline-none text-black"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="bg-zinc-500 shadow-lg px-8 py-2 rounded-lg"
+                >
+                  submit
+                </button>
+              </div>
               <button
-                class="close text-black font-bold absolute right-3 top-3"
+                class="close text-black font-bold"
                 type="button"
                 script="on click add .hidden to #form"
               >
                 &#x2715;
-              </button>
-              <textarea
-                name="post"
-                placeholder="What's on your mind?"
-                class="resize-none outline-none text-black w-full p-2 h-1/2 bg-zinc-300 rounded-lg"
-              ></textarea>
-              <button
-                type="submit"
-                class="bg-zinc-500 shadow-sm px-8 py-2 rounded-lg"
-              >
-                submit
               </button>
             </form>
           </div>

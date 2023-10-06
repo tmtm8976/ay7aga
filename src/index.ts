@@ -1,9 +1,12 @@
 import { Elysia } from 'elysia';
+import { db } from './db';
+import { snippets } from './db/schema';
 
 const app = new Elysia()
   .get('/', () => Bun.file('./src/views/index.html'))
-  .post('/', (res: Response) => {
-    console.log('posted: ', res.body);
+  .post('/', async ({ body }: any) => {
+    console.log(body.post);
+    await db.insert(snippets).values({ content: body.post });
   })
   .listen(3000);
 
