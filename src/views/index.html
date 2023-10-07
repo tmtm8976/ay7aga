@@ -51,7 +51,12 @@
           <!-- create post form end -->
         </div>
         <div>
-          <button class="bg-zinc-600 px-8 py-2 rounded-lg">View Posts</button>
+          <button 
+            hx-get="/posts"
+            hx-swap="afterend"
+            class="bg-zinc-600 px-8 py-2 rounded-lg"
+          >View Posts</button>
+          <div></div>
         </div>
       </div>
     </div>
