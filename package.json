@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.3.5",
+    "attr-accept": "^2.2.2",
     "better-sqlite3": "^8.7.0",
     "drizzle-orm": "^0.28.6",
     "elysia": "latest"
